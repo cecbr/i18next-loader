@@ -64,7 +64,7 @@ module.exports = function () {
           console.info("\t" + fullPath)
         }
 
-        const fileContent = fs.readFileSync(fullPath)
+        const fileContent = fs.readFileSync(fullPath, "utf-8")
         const extname = path.extname(fullPath)
         let parsedContent;
         if (extname === ".yaml" || extname === ".yml") {
